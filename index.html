@@ -183,8 +183,12 @@
         <ul id="cartItems"></ul>
         <p>Total: $<span id="cartTotal">0</span></p>
         <button onclick="clearCart()">Clear Cart</button>
+        <!-- PayPal Checkout Button -->
+        <div id="paypal-button-container"></div>
     </div>
 
+    <!-- PayPal SDK (Sandbox for Testing) -->
+    <script src="https://www.paypal.com/sdk/js?client-id=SB_CLIENT_ID&currency=USD"></script>
     <script src="script.js"></script>
 </body>
 </html>
