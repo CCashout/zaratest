@@ -5,6 +5,11 @@ function toggleMenu() {
     menu.classList.toggle('active');
 }
 
+function toggleCart() {
+    const cartPanel = document.getElementById('cartPanel');
+    cartPanel.classList.toggle('active');
+}
+
 function searchItems(query) {
     const results = document.getElementById('searchResults');
     const grid = document.getElementById('productGrid');
@@ -24,36 +29,26 @@ function searchItems(query) {
             item.getAttribute('data-name'),
             item.getAttribute('data-price'),
             item.getAttribute('data-sizes'),
-            item.getAttribute('data-desc')
+            item.getAttribute('data-desc'),
+            item.querySelector('img').src
         );
         results.appendChild(p);
     });
 
-    // Filter grid visibility
     Array.from(items).forEach(item => {
         item.style.display = filteredItems.includes(item) || !query ? 'block' : 'none';
     });
 }
 
-function showItemModal(title, price, sizes, desc) {
+function showItemModal(title, price, sizes, desc, imageSrc) {
     const modal = document.getElementById('itemModal');
     modal.style.display = 'block';
-    document.getElementById('modalImage').src = 'https://via.placeholder.com/600';
+    document.getElementById('modalImage').src = imageSrc;
     document.getElementById('modalTitle').textContent = title;
     document.getElementById('modalPrice').textContent = price;
     const sizeSelect = document.getElementById('modalSizes');
     sizeSelect.innerHTML = sizes.split(',').map(s => `<option>${s}</option>`).join('');
     document.getElementById('modalDesc').textContent = desc;
-
-    // Add onclick to product items
-    Array.from(document.getElementsByClassName('product-item')).forEach(item => {
-        item.onclick = () => showItemModal(
-            item.getAttribute('data-name'),
-            item.getAttribute('data-price'),
-            item.getAttribute('data-sizes'),
-            item.getAttribute('data-desc')
-        );
-    });
 }
 
 function closeModal() {
@@ -71,6 +66,7 @@ function addToCart() {
 
 function updateCart() {
     const cartItems = document.getElementById('cartItems');
+    const cartCount = document.getElementById('cartCount');
     cartItems.innerHTML = '';
     let total = 0;
     cart.forEach(item => {
@@ -80,6 +76,7 @@ function updateCart() {
         total += parseFloat(item.price.replace('$', ''));
     });
     document.getElementById('cartTotal').textContent = total.toFixed(2);
+    cartCount.textContent = cart.length;
 }
 
 function clearCart() {
@@ -87,7 +84,17 @@ function clearCart() {
     updateCart();
 }
 
-// Initial setup
+// Attach click events to product items
 document.addEventListener('DOMContentLoaded', () => {
+    const items = document.getElementsByClassName('product-item');
+    Array.from(items).forEach(item => {
+        item.onclick = () => showItemModal(
+            item.getAttribute('data-name'),
+            item.getAttribute('data-price'),
+            item.getAttribute('data-sizes'),
+            item.getAttribute('data-desc'),
+            item.querySelector('img').src
+        );
+    });
     updateCart();
 });
