@@ -28,134 +28,138 @@
         <div class="search-results" id="searchResults"></div>
     </div>
 
+    <!-- Sticky Cart Icon -->
+    <div class="cart-icon" onclick="toggleCart()">
+        <span>🛒</span>
+        <span id="cartCount">0</span>
+    </div>
+
     <!-- Hero Section -->
     <div class="hero">
-        <img src="https://via.placeholder.com/1920x1080" alt="Hero Image">
+        <img src="https://images.unsplash.com/photo-1483985988355-0f22514a4f40" alt="Hero Image">
         <h1>NEW COLLECTION</h1>
     </div>
 
     <!-- Product Grid -->
     <div class="product-grid" id="productGrid">
-        <!-- 30 Items -->
         <div class="product-item" data-name="Denim Jacket" data-price="$99" data-sizes="S,M,L" data-desc="Rugged blue denim jacket.">
-            <img src="https://via.placeholder.com/300" alt="Denim Jacket">
+            <img src="https://images.unsplash.com/photo-1601333145900-8b8b2f848e92" alt="Denim Jacket">
             <p>Denim Jacket - $99</p>
         </div>
         <div class="product-item" data-name="White Shirt" data-price="$49" data-sizes="S,M,L" data-desc="Crisp cotton shirt.">
-            <img src="https://via.placeholder.com/300" alt="White Shirt">
+            <img src="https://images.unsplash.com/photo-1516820827745-12b94214e33e" alt="White Shirt">
             <p>White Shirt - $49</p>
         </div>
         <div class="product-item" data-name="Black Jeans" data-price="$79" data-sizes="S,M,L" data-desc="Slim-fit black jeans.">
-            <img src="https://via.placeholder.com/300" alt="Black Jeans">
+            <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246" alt="Black Jeans">
             <p>Black Jeans - $79</p>
         </div>
         <div class="product-item" data-name="Red Dress" data-price="$129" data-sizes="S,M,L" data-desc="Elegant red evening dress.">
-            <img src="https://via.placeholder.com/300" alt="Red Dress">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f" alt="Red Dress">
             <p>Red Dress - $129</p>
         </div>
         <div class="product-item" data-name="Gray Hoodie" data-price="$69" data-sizes="S,M,L" data-desc="Cozy gray hoodie.">
-            <img src="https://via.placeholder.com/300" alt="Gray Hoodie">
+            <img src="https://images.unsplash.com/photo-1571945153237-7fd66c95b4eb" alt="Gray Hoodie">
             <p>Gray Hoodie - $69</p>
         </div>
         <div class="product-item" data-name="Leather Boots" data-price="$149" data-sizes="S,M,L" data-desc="Polished leather boots.">
-            <img src="https://via.placeholder.com/300" alt="Leather Boots">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Leather Boots">
             <p>Leather Boots - $149</p>
         </div>
         <div class="product-item" data-name="Blue Sweater" data-price="$59" data-sizes="S,M,L" data-desc="Soft wool sweater.">
-            <img src="https://via.placeholder.com/300" alt="Blue Sweater">
+            <img src="https://images.unsplash.com/photo-1576871337632-b9d68d973933" alt="Blue Sweater">
             <p>Blue Sweater - $59</p>
         </div>
         <div class="product-item" data-name="Green Skirt" data-price="$89" data-sizes="S,M,L" data-desc="Flowy green midi skirt.">
-            <img src="https://via.placeholder.com/300" alt="Green Skirt">
+            <img src="https://images.unsplash.com/photo-1594633312681-68b5aa11b86e" alt="Green Skirt">
             <p>Green Skirt - $89</p>
         </div>
         <div class="product-item" data-name="Brown Coat" data-price="$199" data-sizes="S,M,L" data-desc="Warm wool coat.">
-            <img src="https://via.placeholder.com/300" alt="Brown Coat">
+            <img src="https://images.unsplash.com/photo-1544027993-37c2a661ac90" alt="Brown Coat">
             <p>Brown Coat - $199</p>
         </div>
         <div class="product-item" data-name="Pink Top" data-price="$39" data-sizes="S,M,L" data-desc="Light pink blouse.">
-            <img src="https://via.placeholder.com/300" alt="Pink Top">
+            <img src="https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03" alt="Pink Top">
             <p>Pink Top - $39</p>
         </div>
-        <!-- Add 20 more items -->
         <div class="product-item" data-name="Striped Tee" data-price="$29" data-sizes="S,M,L" data-desc="Casual striped t-shirt.">
-            <img src="https://via.placeholder.com/300" alt="Striped Tee">
+            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab" alt="Striped Tee">
             <p>Striped Tee - $29</p>
         </div>
         <div class="product-item" data-name="Navy Pants" data-price="$69" data-sizes="S,M,L" data-desc="Tailored navy trousers.">
-            <img src="https://via.placeholder.com/300" alt="Navy Pants">
+            <img src="https://images.unsplash.com/photo-1596706469260-15f9797d30bd" alt="Navy Pants">
             <p>Navy Pants - $69</p>
         </div>
         <div class="product-item" data-name="White Sneakers" data-price="$99" data-sizes="S,M,L" data-desc="Classic white sneakers.">
-            <img src="https://via.placeholder.com/300" alt="White Sneakers">
+            <img src="https://images.unsplash.com/photo-1600185365926-9960a4d4e4c1" alt="White Sneakers">
             <p>White Sneakers - $99</p>
         </div>
         <div class="product-item" data-name="Floral Dress" data-price="$109" data-sizes="S,M,L" data-desc="Bright floral summer dress.">
-            <img src="https://via.placeholder.com/300" alt="Floral Dress">
+            <img src="https://images.unsplash.com/photo-1562183241-b937e1de65e4" alt="Floral Dress">
             <p>Floral Dress - $109</p>
         </div>
         <div class="product-item" data-name="Black Blazer" data-price="$149" data-sizes="S,M,L" data-desc="Sharp black blazer.">
-            <img src="https://via.placeholder.com/300" alt="Black Blazer">
+            <img src="https://images.unsplash.com/photo-1592878905744-6dcfb12e9f31" alt="Black Blazer">
             <p>Black Blazer - $149</p>
         </div>
         <div class="product-item" data-name="Gray Scarf" data-price="$19" data-sizes="S,M,L" data-desc="Soft gray wool scarf.">
-            <img src="https://via.placeholder.com/300" alt="Gray Scarf">
+            <img src="https://images.unsplash.com/photo-1606760227091-3dd44d7f887d" alt="Gray Scarf">
             <p>Gray Scarf - $19</p>
         </div>
         <div class="product-item" data-name="Olive Jacket" data-price="$119" data-sizes="S,M,L" data-desc="Olive green parka.">
-            <img src="https://via.placeholder.com/300" alt="Olive Jacket">
+            <img src="https://images.unsplash.com/photo-1548881417-8b97f69e79e7" alt="Olive Jacket">
             <p>Olive Jacket - $119</p>
         </div>
         <div class="product-item" data-name="Beige Shorts" data-price="$49" data-sizes="S,M,L" data-desc="Casual beige shorts.">
-            <img src="https://via.placeholder.com/300" alt="Beige Shorts">
+            <img src="https://images.unsplash.com/photo-1598529258305-a9f1e4000e66" alt="Beige Shorts">
             <p>Beige Shorts - $49</p>
         </div>
         <div class="product-item" data-name="Purple Top" data-price="$39" data-sizes="S,M,L" data-desc="Vibrant purple tank top.">
-            <img src="https://via.placeholder.com/300" alt="Purple Top">
+            <img src="https://images.unsplash.com/photo-1583744946564-b52acabf43d8" alt="Purple Top">
             <p>Purple Top - $39</p>
         </div>
         <div class="product-item" data-name="Red Scarf" data-price="$25" data-sizes="S,M,L" data-desc="Bold red scarf.">
-            <img src="https://via.placeholder.com/300" alt="Red Scarf">
+            <img src="https://images.unsplash.com/photo-1606761568499-6d24536b9c7f" alt="Red Scarf">
             <p>Red Scarf - $25</p>
         </div>
         <div class="product-item" data-name="Khaki Pants" data-price="$79" data-sizes="S,M,L" data-desc="Relaxed khaki chinos.">
-            <img src="https://via.placeholder.com/300" alt="Khaki Pants">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Khaki Pants">
             <p>Khaki Pants - $79</p>
         </div>
         <div class="product-item" data-name="Yellow Dress" data-price="$99" data-sizes="S,M,L" data-desc="Sunny yellow dress.">
-            <img src="https://via.placeholder.com/300" alt="Yellow Dress">
+            <img src="https://images.unsplash.com/photo-1568254183919-07808836e9a9" alt="Yellow Dress">
             <p>Yellow Dress - $99</p>
         </div>
         <div class="product-item" data-name="Blue Jeans" data-price="$89" data-sizes="S,M,L" data-desc="Classic blue denim jeans.">
-            <img src="https://via.placeholder.com/300" alt="Blue Jeans">
+            <img src="https://images.unsplash.com/photo-1542272604-787c3835535d" alt="Blue Jeans">
             <p>Blue Jeans - $89</p>
         </div>
         <div class="product-item" data-name="Green Hoodie" data-price="$69" data-sizes="S,M,L" data-desc="Forest green hoodie.">
-            <img src="https://via.placeholder.com/300" alt="Green Hoodie">
+            <img src="https://images.unsplash.com/photo-1571945153237-7fd66c95b4eb" alt="Green Hoodie">
             <p>Green Hoodie - $69</p>
         </div>
         <div class="product-item" data-name="Black Boots" data-price="$129" data-sizes="S,M,L" data-desc="Sleek black ankle boots.">
-            <img src="https://via.placeholder.com/300" alt="Black Boots">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Black Boots">
             <p>Black Boots - $129</p>
         </div>
         <div class="product-item" data-name="White Top" data-price="$35" data-sizes="S,M,L" data-desc="Simple white tee.">
-            <img src="https://via.placeholder.com/300" alt="White Top">
+            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab" alt="White Top">
             <p>White Top - $35</p>
         </div>
         <div class="product-item" data-name="Gray Pants" data-price="$79" data-sizes="S,M,L" data-desc="Tailored gray trousers.">
-            <img src="https://via.placeholder.com/300" alt="Gray Pants">
+            <img src="https://images.unsplash.com/photo-1596706469260-15f9797d30bd" alt="Gray Pants">
             <p>Gray Pants - $79</p>
         </div>
         <div class="product-item" data-name="Orange Jacket" data-price="$139" data-sizes="S,M,L" data-desc="Bright orange raincoat.">
-            <img src="https://via.placeholder.com/300" alt="Orange Jacket">
+            <img src="https://images.unsplash.com/photo-1548881417-8b97f69e79e7" alt="Orange Jacket">
             <p>Orange Jacket - $139</p>
         </div>
         <div class="product-item" data-name="Pink Skirt" data-price="$59" data-sizes="S,M,L" data-desc="Pleated pink skirt.">
-            <img src="https://via.placeholder.com/300" alt="Pink Skirt">
+            <img src="https://images.unsplash.com/photo-1594633312681-68b5aa11b86e" alt="Pink Skirt">
             <p>Pink Skirt - $59</p>
         </div>
         <div class="product-item" data-name="Brown Shoes" data-price="$109" data-sizes="S,M,L" data-desc="Casual brown loafers.">
-            <img src="https://via.placeholder.com/300" alt="Brown Shoes">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Brown Shoes">
             <p>Brown Shoes - $109</p>
         </div>
     </div>
@@ -173,8 +177,8 @@
         </div>
     </div>
 
-    <!-- Cart Section -->
-    <div class="cart" id="cart">
+    <!-- Cart Panel -->
+    <div class="cart-panel" id="cartPanel">
         <h2>Shopping Cart</h2>
         <ul id="cartItems"></ul>
         <p>Total: $<span id="cartTotal">0</span></p>
