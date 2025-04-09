@@ -84,6 +84,39 @@ function clearCart() {
     updateCart();
 }
 
+// PayPal Integration
+paypal.Buttons({
+    createOrder: function(data, actions) {
+        const total = document.getElementById('cartTotal').textContent;
+        if (total === '0.00' || cart.length === 0) {
+            alert('Your cart is empty!');
+            return;
+        }
+        return actions.order.create({
+            purchase_units: [{
+                amount: {
+                    value: total,
+                    currency_code: 'USD'
+                }
+            }],
+            application_context: {
+                shipping_preference: 'NO_SHIPPING' // No shipping for digital-like goods
+            }
+        });
+    },
+    onApprove: function(data, actions) {
+        return actions.order.capture().then(function(details) {
+            alert('Payment completed successfully! Transaction ID: ' + details.id);
+            clearCart();
+            toggleCart();
+        });
+    },
+    onError: function(err) {
+        alert('An error occurred during payment. Please try again.');
+        console.error(err);
+    }
+}).render('#paypal-button-container');
+
 // Attach click events to product items
 document.addEventListener('DOMContentLoaded', () => {
     const items = document.getElementsByClassName('product-item');
