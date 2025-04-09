@@ -184,7 +184,7 @@ body {
 .cart-panel ul {
     list-style: none;
     padding: 0;
-    max-height: 70%;
+    max-height: 50%;
     overflow-y: auto;
 }
 .cart-panel li { margin: 10px 0; }
@@ -195,4 +195,8 @@ body {
     border: none;
     cursor: pointer;
     width: 100%;
+    margin-top: 10px;
+}
+#paypal-button-container {
+    margin-top: 20px;
 }
