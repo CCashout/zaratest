@@ -64,7 +64,9 @@ body {
     width: 200px;
     background: transparent;
     outline: none;
+    transition: width 0.3s;
 }
+.search-bar input:focus { width: 100vw; }
 .search-results {
     display: none;
     position: absolute;
@@ -75,7 +77,11 @@ body {
     background: #fff;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    max-height: 300px;
+    overflow-y: auto;
 }
+.search-results p { margin: 5px 0; cursor: pointer; }
+.search-results p:hover { color: #666; }
 
 /* Hero Section */
 .hero {
@@ -138,6 +144,26 @@ body {
 .modal-content h2 { margin: 10px 0; }
 .modal-content select { margin: 10px 0; padding: 5px; }
 .modal-content button {
+    background: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Cart */
+.cart {
+    padding: 20px;
+    background: #f9f9f9;
+    margin: 20px;
+    border-top: 1px solid #ddd;
+}
+.cart ul {
+    list-style: none;
+    padding: 0;
+}
+.cart li { margin: 10px 0; }
+.cart button {
     background: #000;
     color: #fff;
     padding: 10px 20px;
