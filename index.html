@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zara Clone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hamburger Menu -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+    </div>
+
+    <!-- Full-Screen Navigation -->
+    <div class="nav-menu" id="navMenu">
+        <ul>
+            <li><a href="#">WOMEN</a></li>
+            <li><a href="#">MEN</a></li>
+            <li><a href="#">KIDS</a></li>
+            <li><a href="#">BEAUTY</a></li>
+        </ul>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" placeholder="SEARCH" onfocus="expandSearch()">
+        <div class="search-results" id="searchResults"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <img src="https://via.placeholder.com/1920x1080" alt="Hero Image">
+        <h1>NEW COLLECTION</h1>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="product-grid">
+        <div class="product-item" onclick="showItemModal('Jacket', '$99', 'S,M,L', 'A stylish jacket.')">
+            <img src="https://via.placeholder.com/300" alt="Jacket">
+            <p>Jacket - $99</p>
+        </div>
+        <div class="product-item" onclick="showItemModal('Shirt', '$49', 'M,L,XL', 'Casual shirt.')">
+            <img src="https://via.placeholder.com/300" alt="Shirt">
+            <p>Shirt - $49</p>
+        </div>
+    </div>
+
+    <!-- Item Modal -->
+    <div class="modal" id="itemModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="Item">
+            <h2 id="modalTitle"></h2>
+            <p id="modalPrice"></p>
+            <select id="modalSizes"></select>
+            <p id="modalDesc"></p>
+            <button onclick="addToCart()">ADD TO CART</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
